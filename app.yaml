@@ -1,0 +1,18 @@
+# [START runtime]
+runtime: nodejs16
+# [END runtime]
+
+# [START handlers]
+handlers:
+  - url: /static
+    static_dir: build/static
+
+  - url: /(.*\.(json|ico|png|mp4|PNG|js|svg))$
+    static_files: build/\1
+    upload: build/.*\.(json|ico|png|mp4|PNG|js|svg)$
+
+  - url: /.*
+    secure: always
+    static_files: build/index.html
+    upload: build/index.html
+# [END handlers]
