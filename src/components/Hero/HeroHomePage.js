@@ -239,7 +239,7 @@ if(user_type=='student'){
     </>)
   }else{
     window.location.replace('https://Omniboard-old.afd.enterprises/errorpage/payments')
-    //window.location.replace('http://localhost:3001/errorpage/payments')
+    //window.location.replace('https://master.d7ue7wu507q2m.amplifyapp.com/errorpage/payments')
   }
 }
   if(user_type=='adminteacherlist'){
@@ -258,7 +258,7 @@ if(user_type=='student'){
     )}
     else{
       window.location.replace('https://Omniboard-old.afd.enterprises/errorpage')
-     // window.location.replace('http://localhost:3001/errorpage')
+     // window.location.replace('https://master.d7ue7wu507q2m.amplifyapp.com/errorpage')
 
     }
   }

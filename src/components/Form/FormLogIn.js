@@ -21,7 +21,7 @@ import Cookies from 'js-cookie';
 import useToken from "./useToken"
 
 const DOMAIN = 'https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
-const SD = 'http://localhost:3001'
+const SD = 'https://master.d7ue7wu507q2m.amplifyapp.com'
 const SD1 = 'http://localhost:3000'
 const FormLogIn = (props) => {
 	const [name, setName] = useState('');
