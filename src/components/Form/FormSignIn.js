@@ -15,8 +15,9 @@ import {
 import {GoogleLogin} from 'react-google-login';
 import {gapi} from 'gapi-script'
 import { Container } from '../../globalStyles';
-import validateForm from './validateForm';
 import sign_in_function from '../../functions/sign_in_function';
+import validateForm from './validateForm';
+
 const DOMAIN = 'https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
 const SD1 = 'http://localhost:3000'
 const FormSignIn = () => {
@@ -103,66 +104,24 @@ const FormSignIn = () => {
 		},
 	];
 	return (
-		<FormSection>
-			<Container>
-				<FormRow>
-					<FormColumn small>
-						<FormTitle>Sign up</FormTitle>
-						<FormWrapper onSubmit={handleSubmit}>
-							{formData.map((el, index) => (
-								<FormInputRow key={index}>
-									<FormLabel>{el.label}</FormLabel>
-									<FormInput
-										type={el.type}
-										placeholder={`${el.label.toLocaleLowerCase()}`}
-										value={el.value}
-										onChange={el.onChange}
-									/>
-								</FormInputRow>
-							))}
-
-							<FormButton onClick={()=>{
-								 try{
-									sign_in_function(name,lname,password,email)
-								  }
-								catch(err){alert('You left some fields empty')}
-
-							}} type="submit">Signup</FormButton>
-							
-						</FormWrapper>
-						<FormMessage>
-						<div>	<GoogleLogin 
-     clientId={'615921346526-8gs4b74dja97fje48tv2o459a6g7e9ns.apps.googleusercontent.com'}
-      onSuccess={(res)=>signinwithgoogle(res.profileObj['name'],res.profileObj['givenName'],res.profileObj['googleId'],res.profileObj['email'])}
-      onFailure={(res)=>alert('if you are using google to sign in,please try again later',res)}
-      isSignedIn={false}
-      	   buttonText={"sign up with google"}
-
-/></div>
-						</FormMessage>
-						{error && (
-							<FormMessage
-								variants={messageVariants}
-								initial="hidden"
-								animate="animate"
-								error
-							>
-								{error}
-							</FormMessage>
-						)}
-						{success && (
-							<FormMessage
-								variants={messageVariants}
-								initial="hidden"
-								animate="animate"
-							>
-								{success}
-							</FormMessage>
-						)}
-					</FormColumn>
-				
-				</FormRow>
-				
+		<FormSection style={{ backgroundColor: '#e9f5ff', padding: '60px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+			<Container style={{ maxWidth: '500px', margin: '0 auto', textAlign: 'center', backgroundColor: '#ffffff', borderRadius: '10px', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)', padding: '30px' }}>
+				<FormTitle style={{ fontSize: '2.5rem', marginBottom: '20px', color: '#007bff', fontWeight: 'bold' }}>Join Us!</FormTitle>
+				<p style={{ fontSize: '1rem', color: '#555', marginBottom: '30px' }}>Sign up to create your account</p>
+				<FormWrapper>
+					<FormMessage>
+						<div>
+							<GoogleLogin 
+								clientId={'615921346526-8gs4b74dja97fje48tv2o459a6g7e9ns.apps.googleusercontent.com'}
+								onSuccess={(res)=>signinwithgoogle(res.profileObj['name'],res.profileObj['givenName'],res.profileObj['googleId'],res.profileObj['email'])}
+								onFailure={(res)=>alert('if you are using Google to sign up, please try again later')}
+								isSignedIn={false}
+								buttonText={'Sign up with Google'}
+								style={{ width: '100%', padding: '15px', fontSize: '1.2rem', borderRadius: '8px', backgroundColor: '#007bff', color: '#fff', border: 'none', cursor: 'pointer' }}
+							/>
+						</div>
+					</FormMessage>
+				</FormWrapper>
 			</Container>
 		</FormSection>
 	);

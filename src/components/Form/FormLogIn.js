@@ -118,98 +118,26 @@ const FormLogIn = (props) => {
                           
       }
 	return (
-		<FormSection>
-			<Container>
-				<FormRow>
-					<FormColumn small>
-						<FormTitle>Log In</FormTitle>
-						<FormWrapper onSubmit={handleSubmit}>
-							{formData.map((el, index) => (
-								<FormInputRow key={index}>
-									<FormLabel>{el.label}</FormLabel>
-									<FormInput
-										type={el.type}
-										placeholder={`Enter your ${el.label.toLocaleLowerCase()}`}
-										value={el.value}
-										onChange={el.onChange}
-									/>
-								</FormInputRow>
-							))}
-
-							<FormButton onClick={async()=>{
-								        
-											let preapi3 = await fetch(`${DOMAIN}/get_last_name_and_email/${name}`)
-											preapi3 = await preapi3.json()
-		    								let preapi2 = await fetch(`${DOMAIN}/set_cookie/${preapi3.email}`)
-											preapi2 = await preapi2.json()
-											setCookie(preapi3.email)
-                                            let api = await fetch(`${DOMAIN}/login/`, {
-												method: 'POST',
-												headers: {
-												  'Content-Type': 'application/json'
-												},
-												body: JSON.stringify({ first_name: name, password: password })
-											  })
-                                            api = await api.json()
-											if(api.status===201){
-											setToken(api.access_token)}
-				  							localStorage.setItem('name', name)
-                                            let ut = await fetch(`${DOMAIN}/get_user_type/${name}`)
-                                            ut = await ut.json()
-                                            console.log(ut.data)
-											
-                                            if(api['data'] == "username not found"){
-                                              console.log('username not found')
-                                                alert("username not found")
-                                            }
-                                            if('granted' == api["data"]){
-                                              setAccess("Granted")
-                                             
-													
-															window.location.replace(SD+'/folders/'+preapi3['email'])
-														
-                                            }
-                                            else{
-                                              alert("Incorrect Password")
-                                            }
-                                            console.log(access)
-
-							}} type="submit">Login In</FormButton>
-                            
-						</FormWrapper>
-						<FormMessage>
-						<div >	<GoogleLogin 
+		<FormSection style={{ backgroundColor: '#e9f5ff', padding: '60px 0', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
+  <Container style={{ maxWidth: '500px', margin: '0 auto', textAlign: 'center', backgroundColor: '#ffffff', borderRadius: '10px', boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)', padding: '30px' }}>
+    <FormTitle style={{ fontSize: '2.5rem', marginBottom: '20px', color: '#007bff', fontWeight: 'bold' }}>Welcome Back!</FormTitle>
+    <p style={{ fontSize: '1rem', color: '#555', marginBottom: '30px' }}>Log in to access your account</p>
+    <FormWrapper>
+      <FormMessage>
+        <div>
+          <GoogleLogin 
             clientId={'615921346526-8gs4b74dja97fje48tv2o459a6g7e9ns.apps.googleusercontent.com'}
             onSuccess={(res)=>loginwithgoogle(res.profileObj['name'],res.profileObj['googleId'])}
-            onFailure={(res)=>alert('had trouble logging in,please try again')}
-           isSignedIn={false}
-	   buttonText={"Login with google"}
-      /></div>
-
-						</FormMessage>
-						{error && (
-							<FormMessage
-								variants={messageVariants}
-								initial="hidden"
-								animate="animate"
-								error
-							>
-							</FormMessage>
-						)}
-						{success && (
-							<FormMessage
-								variants={messageVariants}
-								initial="hidden"
-								animate="animate"
-							>
-							</FormMessage>
-						)}
-					</FormColumn>
-				
-				</FormRow>
-				
-			</Container>
-		</FormSection>
+            onFailure={(res)=>alert('had trouble logging in, please try again')}
+            isSignedIn={false}
+            buttonText={'Login with Google'}
+            style={{ width: '100%', padding: '15px', fontSize: '1.2rem', borderRadius: '8px', backgroundColor: '#007bff', color: '#fff', border: 'none', cursor: 'pointer' }}
+          />
+        </div>
+      </FormMessage>
+    </FormWrapper>
+  </Container>
+</FormSection>
 	);
 };
 
