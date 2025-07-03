@@ -17,7 +17,7 @@ const sign_in_function = async(fname,lname,password,email)=>{
       if(white_list.includes(disected_address)){
     let api = await fetch(`https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod/sign_in/${fname}/${lname}/${password}/${email}/`)
     let api_json = await api.json()
-    window.location.replace('http://localhost:3000/login')
+    window.location.replace('https://omniboard.afd.enterprises/login')
     return api_json
     }
     else{alert('Use company email to sign in')}

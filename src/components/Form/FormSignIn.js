@@ -19,7 +19,7 @@ import sign_in_function from '../../functions/sign_in_function';
 import validateForm from './validateForm';
 
 const DOMAIN = 'https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
-const SD1 = 'http://localhost:3000'
+const SD1 = 'https://omniboard.afd.enterprises'
 const FormSignIn = () => {
 	const [name, setName] = useState('');
 	const [lname, setLname] = useState('')
