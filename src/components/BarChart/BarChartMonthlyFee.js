@@ -5,7 +5,7 @@ import {
     VictoryChart,
     VictoryTheme
   } from "victory";
-const DOMAIN = 'https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
+const DOMAIN = 'https://omniboard-apis.afd.enterprises'
 function BarChartMonthlyFee(props){
     const [monthly_fee,setMF] = useState(10)
     useEffect(() => {

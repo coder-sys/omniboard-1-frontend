@@ -26,8 +26,8 @@ const get_student_ref_link = async(data)=>{
       //  return api['data']
       return api['data']
 }
-const DOMAIN = 'https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
-const SD = 'https://Omniboard.afd.enterprises'
+const DOMAIN = 'https://omniboard-apis.afd.enterprises'
+const SD = 'https://omniboard.afd.enterprises'
 const SD1 = 'https://Omniboard-old.afd.enterprises'
 function NameList(props){
 

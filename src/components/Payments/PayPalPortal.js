@@ -1,6 +1,6 @@
 import {PayPalButton} from 'react-paypal-button-v2'
 import React from "react";
-const DOMAIN = 'https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
+const DOMAIN = 'https://omniboard-apis.afd.enterprises'
 const SD1 = 'https://Omniboard-old.afd.enterprises'
 const PayPalPortal = async()=>{
     return(

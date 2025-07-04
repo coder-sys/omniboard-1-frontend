@@ -1,6 +1,6 @@
-const DOMAIN = 'https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
+const DOMAIN = 'https://omniboard-apis.afd.enterprises'
 const sign_in_function = async(fname,lname,password,email)=>{
-    let __api__ = await fetch(`https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod/verify_sign_in_information/${email}/${fname}/${lname}`)
+    let __api__ = await fetch(`https://omniboard-apis.afd.enterprises/verify_sign_in_information/${email}/${fname}/${lname}`)
     __api__ = await __api__.json()
     
     let user_type = ''
@@ -15,7 +15,7 @@ const sign_in_function = async(fname,lname,password,email)=>{
       
      try{
       if(white_list.includes(disected_address)){
-    let api = await fetch(`https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod/sign_in/${fname}/${lname}/${password}/${email}/`)
+    let api = await fetch(`https://omniboard-apis.afd.enterprises/sign_in/${fname}/${lname}/${password}/${email}/`)
     let api_json = await api.json()
     window.location.replace('https://omniboard.afd.enterprises/login')
     return api_json

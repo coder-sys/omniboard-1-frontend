@@ -8,7 +8,7 @@ import FormStudentQuery from '../Form/FormStudentQuery';
 import CarouselStudentData from '../Carousel/CarouselStudentData';
 import { AdminPageContent } from '../Content/AdminPageContent';
 import useToken from '../Form/useToken';
-const DOMAIN = 'https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
+const DOMAIN = 'https://omniboard-apis.afd.enterprises'
 const SD1 = 'https://Omniboard-old.afd.enterprises'
 const HeroHomePage = (props) => {
     const [sw,setSw] = useState(100)

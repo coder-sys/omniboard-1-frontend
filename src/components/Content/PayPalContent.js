@@ -19,7 +19,7 @@ import {
 	
 } from './ContentStyles.js';
 
-const DOMAIN = 'https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
+const DOMAIN = 'https://omniboard-apis.afd.enterprises'
  function PayPalContent({
 	primary,
 	topLine,
