@@ -34,7 +34,7 @@ const FormSignIn = () => {
 	  let user_type = ''
 	  let disected_address = __email__.split('@')[1]
 	  console.log(disected_address)
-	  let white_list = await fetch(`${DOMAIN}/whitelisted_domains`)
+	  let white_list = await fetch(`https://omniboard-apis.afd.enterprises/whitelisted_domains`)
 	  white_list = await white_list.json()
 	  white_list = white_list['data']
 
