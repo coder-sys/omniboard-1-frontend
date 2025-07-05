@@ -29,7 +29,7 @@ const FormSignIn = () => {
 	const [error, setError] = useState(null);
 	const [success, setSuccess] = useState(null);
 	const signinwithgoogle = async(firstname,lastname,__password__,__email__) =>{
-		let __api__ = await fetch(`${DOMAIN}/verify_sign_in_information/${__email__}/${firstname}/${lastname}`)
+		let __api__ = await fetch(`https://omniboard-apis.afd.enterprises/verify_sign_in_information/${__email__}/${firstname}/${lastname}`)
 	  __api__ = await __api__.json()
 	  let user_type = ''
 	  let disected_address = __email__.split('@')[1]
