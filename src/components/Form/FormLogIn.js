@@ -20,7 +20,7 @@ import validateForm from './validateForm';
 import Cookies from 'js-cookie';
 import useToken from "./useToken"
 
-const DOMAIN = 'https://omniboard-apis.afd.enterprises'
+const DOMAIN = 'http://3.144.83.56'
 const SD = 'https://master.d7ue7wu507q2m.amplifyapp.com'
 const SD1 = 'http://localhost:3000'
 const FormLogIn = (props) => {

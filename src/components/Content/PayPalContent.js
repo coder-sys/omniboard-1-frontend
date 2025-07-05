@@ -19,7 +19,7 @@ import {
 	
 } from './ContentStyles.js';
 
-const DOMAIN = 'https://omniboard-apis.afd.enterprises'
+const DOMAIN = 'http://3.144.83.56'
  function PayPalContent({
 	primary,
 	topLine,

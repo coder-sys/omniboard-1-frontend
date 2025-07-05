@@ -16,7 +16,7 @@ import BarChartStudentEnrollment from '../BarChart/BarChartStudentEnrollment';
 
 import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
-const DOMAIN = 'https://omniboard-apis.afd.enterprises'
+const DOMAIN = 'http://3.144.83.56'
 const FormStudentQuery = (props) => {
 	const [query, setQuery] = useState('');
 	const [error, setError] = useState(null);

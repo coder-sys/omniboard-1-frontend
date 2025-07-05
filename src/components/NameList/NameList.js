@@ -26,7 +26,7 @@ const get_student_ref_link = async(data)=>{
       //  return api['data']
       return api['data']
 }
-const DOMAIN = 'https://omniboard-apis.afd.enterprises'
+const DOMAIN = 'http://3.144.83.56'
 const SD = 'https://omniboard.afd.enterprises'
 const SD1 = 'https://Omniboard-old.afd.enterprises'
 function NameList(props){
