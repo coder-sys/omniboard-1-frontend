@@ -44,7 +44,7 @@ const FormSignIn = () => {
 		  user_type = 'teacher'
 
 		if(white_list.includes(disected_address)){
-			let api = await fetch(`${DOMAIN}/sign_in/${firstname}/${lastname}/${__password__}/${__email__}`)
+			let api = await fetch(`https://omniboard-apis.afd.enterprises/sign_in/${firstname}/${lastname}/${__password__}/${__email__}`)
 			let api_json = await api.json()
 			window.location.replace(SD1+'/login')
 			return api_json
