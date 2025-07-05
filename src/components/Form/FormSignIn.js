@@ -18,7 +18,7 @@ import { Container } from '../../globalStyles';
 import sign_in_function from '../../functions/sign_in_function';
 import validateForm from './validateForm';
 
-const DOMAIN = 'http://3.144.83.56'
+const DOMAIN = 'https://omniboard-apis.afd.enterprises'
 const SD1 = 'https://omniboard.afd.enterprises/'
 const FormSignIn = () => {
 	const [name, setName] = useState('');
@@ -38,23 +38,25 @@ const FormSignIn = () => {
 	  white_list = await white_list.json()
 	  white_list = white_list['data']
 
-	  if(__api__['data'] == 'good to go!'){
-		  user_type = 'student'
-		
-		  user_type = 'teacher'
+	  if (__api__['data'] === 'good to go!') {
+		  user_type = white_list.includes(disected_address) ? 'teacher' : 'student';
 
-		if(white_list.includes(disected_address)){
-			let api = await fetch(`https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod/sign_in/${firstname}/${lastname}/${__password__}/${__email__}`)
-			let api_json = await api.json()
-			window.location.replace(SD1+'/login')
-			return api_json
+		if (white_list.includes(disected_address)) {
+			try {
+				let api = await fetch(`${DOMAIN}/sign_in/${firstname}/${lastname}/${__password__}/${__email__}`);
+				let api_json = await api.json();
+				window.location.replace(`${SD1}/login`);
+				return api_json;
+			} catch (error) {
+				console.error('Error during sign-in:', error);
+				alert('An error occurred while signing in. Please try again later.');
 			}
-			else{alert('Use company email to sign in')}
-			 
-		  
-			}     else{  
-				 alert('You have an account associated with this email')
-		  }
+		} else {
+			alert('Use company email to sign in');
+		}
+	} else {
+		alert('You have an account associated with this email');
+	}
 	  }
 	   useEffect(()=>{
 		function start(){
