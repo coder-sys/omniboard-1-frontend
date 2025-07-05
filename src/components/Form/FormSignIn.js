@@ -18,7 +18,7 @@ import { Container } from '../../globalStyles';
 import sign_in_function from '../../functions/sign_in_function';
 import validateForm from './validateForm';
 
-const DOMAIN = 'https://omniboard-apis.afd.enterprises'
+const DOMAIN ='http2://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
 const SD1 = 'https://omniboard.afd.enterprises/'
 const FormSignIn = () => {
 	const [name, setName] = useState('');
@@ -41,7 +41,7 @@ const FormSignIn = () => {
 
 		if (white_list.includes(disected_address)) {
 			try {
-				let api = await fetch(`https://omniboard-apis.afd.enterprises/sign_in/${firstname}/${lastname}/${__password__}/${__email__}`)
+				let api = await fetch(`${DOMAIN}/sign_in/${firstname}/${lastname}/${__password__}/${__email__}`)
 				let api_json = await api.json();
 				window.location.replace(`${SD1}/login`);
 				return api_json;
