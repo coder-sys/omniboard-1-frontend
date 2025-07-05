@@ -19,7 +19,7 @@ import {
 	
 } from './ContentStyles.js';
 
-const DOMAIN = 'http://3.144.83.56'
+const DOMAIN = 'http://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
  function PayPalContent({
 	primary,
 	topLine,

@@ -5,7 +5,7 @@ import {
     VictoryChart,
     VictoryTheme
   } from "victory";
-const DOMAIN = 'http://3.144.83.56'
+const DOMAIN = 'http://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
 function BarChartMonthlyFee(props){
     const [monthly_fee,setMF] = useState(10)
     useEffect(() => {

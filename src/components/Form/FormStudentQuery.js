@@ -16,7 +16,7 @@ import BarChartStudentEnrollment from '../BarChart/BarChartStudentEnrollment';
 
 import { Container } from '../../globalStyles';
 import validateForm from './validateForm';
-const DOMAIN = 'http://3.144.83.56'
+const DOMAIN = 'http://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
 const FormStudentQuery = (props) => {
 	const [query, setQuery] = useState('');
 	const [error, setError] = useState(null);
