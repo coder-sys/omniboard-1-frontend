@@ -54,7 +54,6 @@ const HeroInformation = () => {
 						<img src='/assets/security.jpg' alt='Security' style={{ width: 110, height: 70, objectFit: 'cover', borderRadius: 8, boxShadow: '0 2px 8px #e0e7ff', background: '#fff', border: '1px solid #e5e7eb' }} />
 						<img src='/assets/clients.jpg' alt='Clients' style={{ width: 110, height: 70, objectFit: 'cover', borderRadius: 8, boxShadow: '0 2px 8px #e0e7ff', background: '#fff', border: '1px solid #e5e7eb' }} />
 					</div>
-					<img src='/assets/afdenterpriseslogoregular.PNG' style={{ width: '70px', height: '70px', borderRadius: 8, boxShadow: '0 2px 8px #e0e7ff', margin: '0 auto 12px auto', display: 'block', background: '#fff', padding: 4, border: '1px solid #e5e7eb' }} alt="AFD Enterprises Logo" />
 				</Container>
 			</HeroSection>
 		</FormSection>
