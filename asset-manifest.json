@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/Omniboard-1-frontend/static/js/main.7e3a2cbb.js",
+    "index.html": "/Omniboard-1-frontend/index.html",
+    "main.7e3a2cbb.js.map": "/Omniboard-1-frontend/static/js/main.7e3a2cbb.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.7e3a2cbb.js"
+  ]
+}
