@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Omniboard/static/js/main.d218e70a.js",
-    "index.html": "/Omniboard/index.html",
-    "main.d218e70a.js.map": "/Omniboard/static/js/main.d218e70a.js.map"
+    "main.js": "/Omniboard-1-frontend/static/js/main.7e3a2cbb.js",
+    "index.html": "/Omniboard-1-frontend/index.html",
+    "main.7e3a2cbb.js.map": "/Omniboard-1-frontend/static/js/main.7e3a2cbb.js.map"
   },
   "entrypoints": [
-    "static/js/main.d218e70a.js"
+    "static/js/main.7e3a2cbb.js"
   ]
 }

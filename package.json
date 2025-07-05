@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://coder-sys.github.io/Omniboard-1-frontend",
   "description": "Omniboard is a platform that provides a comprehensive dashboard for students, teachers, and parents to track academic performance, attendance, and other educational metrics.",
+  "gh-pages": {
+    "repo": "https://github.com/coder-sys/Omniboard-1-frontend.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
