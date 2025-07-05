@@ -31,15 +31,13 @@ const FormSignIn = () => {
 	const signinwithgoogle = async(firstname,lastname,__password__,__email__) =>{
 		let __api__ = await fetch(`https://omniboard-apis.afd.enterprises/verify_sign_in_information/${__email__}/${firstname}/${lastname}`)
 	  __api__ = await __api__.json()
-	  let user_type = ''
 	  let disected_address = __email__.split('@')[1]
 	  console.log(disected_address)
 	  let white_list = await fetch(`https://omniboard-apis.afd.enterprises/whitelisted_domains`)
 	  white_list = await white_list.json()
 	  white_list = white_list['data']
-
+	console.log(white_list)
 	  if (__api__['data'] === 'good to go!') {
-		  user_type = white_list.includes(disected_address) ? 'teacher' : 'student';
 
 		if (white_list.includes(disected_address)) {
 			try {
