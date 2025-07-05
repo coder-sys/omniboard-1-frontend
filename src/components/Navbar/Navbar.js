@@ -14,6 +14,7 @@ import {
 } from './NavbarStyles.js';
 import { useLocation, useHistory } from 'react-router-dom';
 import { data } from '../../data/NavbarData';
+import CustomLogo from './CustomLogo';
 
 const Navbar = (props) => {
 	const [show, setShow] = useState(false);
@@ -48,8 +49,7 @@ const Navbar = (props) => {
 				<NavbarContainer>
 					
 					<NavLogo to="/">
-						<NavIcon style={{width:'100px',height:'75px',borderRadius:'10px'}} src={'/assets/afdenterpriseslogoregular.PNG'} />
-						<div style={{'color':'silver'}}><b>Omniboard</b></div>
+						<CustomLogo />
 					</NavLogo>
 					<MobileIcon onClick={handleClick}>
 						{show ? <FaTimes /> : <CgMenuRight />}
