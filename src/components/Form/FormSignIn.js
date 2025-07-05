@@ -18,7 +18,7 @@ import { Container } from '../../globalStyles';
 import sign_in_function from '../../functions/sign_in_function';
 import validateForm from './validateForm';
 
-const DOMAIN ='http2://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
+const DOMAIN ='https://25xdhfsbmi.execute-api.us-east-2.amazonaws.com/prod'
 const SD1 = 'https://omniboard.afd.enterprises/'
 const FormSignIn = () => {
 	const [name, setName] = useState('');
