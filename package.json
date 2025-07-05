@@ -8,6 +8,8 @@
 		"@testing-library/user-event": "^12.1.10",
 		"axios": "^1.6.8",
 		"cors": "^2.8.5",
+		"firebase": "^11.10.0",
+		"firebase-admin": "^13.4.0",
 		"framer-motion": "^4.1.17",
 		"gapi-script": "^1.2.0",
 		"gh-pages": "^4.0.0",

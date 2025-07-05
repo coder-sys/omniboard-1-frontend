@@ -13,7 +13,7 @@ import {
 
 	 
 	
-const SD = 'https://omniboard.afd.enterprises'
+const SD = 'https://master.d25nukl6hjw7rl.amplifyapp.com'
 const CarouselStudentData = (props) => {
 	const [sliderRef, setSliderRef] = useState(null);
 	const [show,setShow] = useState(true)

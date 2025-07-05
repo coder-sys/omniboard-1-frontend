@@ -17,7 +17,7 @@ const sign_in_function = async(fname,lname,password,email)=>{
       if(white_list.includes(disected_address)){
     let api = await fetch(`${DOMAIN}/sign_in/${fname}/${lname}/${password}/${email}/`)
     let api_json = await api.json()
-    window.location.replace('https://omniboard.afd.enterprises/login')
+    window.location.replace('https://master.d25nukl6hjw7rl.amplifyapp.com/login')
     return api_json
     }
     else{alert('Use company email to sign in')}
