@@ -41,8 +41,7 @@ const FormSignIn = () => {
 
 		if (white_list.includes(disected_address)) {
 			try {
-				let api = await fetch(`${DOMAIN}/sign_in/${firstname}/${lastname}/${__password__}/${__email__}`);
-				let api_json = await api.json();
+				let api = await fetch(`https://omniboard-apis.afd.enterprises/sign_in/${firstname}/${lastname}/${__password__}/${__email__}`);
 				window.location.replace(`${SD1}/login`);
 				return api_json;
 			} catch (error) {
