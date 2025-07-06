@@ -165,7 +165,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
         >
-          <MainHeading>📊 Product Management</MainHeading>
+          <MainHeading style={{ fontSize: '2.8rem' }}>📊 Product Management</MainHeading>
           <SubText>
             Streamline your entire product lifecycle with a robust platform tailored to product teams, integrating planning, tracking, and collaboration.
           </SubText>
