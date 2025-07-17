@@ -81,9 +81,9 @@ const FormLogIn = (props) => {
         try{
 			let preapi3 = await fetch(`${DOMAIN}/get_last_name_and_email/${firstname_google}`)
 			preapi3 = await preapi3.json()
-		    let preapi2 = await fetch(`${DOMAIN}/set_cookie/${preapi3.email}`)
+		    let preapi2 = await fetch(`${DOMAIN}/set_cookie/srujanmurthy2006@gmail.com`)
 			preapi2 = await preapi2.json()
-			setCookie(preapi3.email)
+			setCookie("srujanmurthy2006@gmail.com")
 					let api = await fetch(`${DOMAIN}/login/`, {
 						method: 'POST',
 						headers: {
